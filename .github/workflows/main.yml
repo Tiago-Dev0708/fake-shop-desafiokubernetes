@@ -22,7 +22,7 @@ jobs:
           context: ./src
           push: true
           file: ./src/Dockerfile
-          tags: tiagodochub/fake-shop-desafio-kubernete:v1
+          tags: tiagodochub/fake-shop-desafio-kubernete:v${{ github.run_number }}
       - run: echo "Enviar a imagem Docker para o Docker Hub"
   CD:
     needs: [CI]
